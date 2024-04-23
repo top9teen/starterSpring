@@ -67,4 +67,12 @@ public class StarterController {
 
         return ResponseEntity.status(HttpStatus.OK).body(numberStr);
     }
+    
+    @GetMapping("/test7")
+    public ResponseEntity<String> test7(@RequestParam("test2") int param) {
+
+        String numberStr = this.starterService.mainMethod(param);
+
+        return ResponseEntity.status(HttpStatus.OK).body(numberStr);
+    }
 }
